@@ -8,20 +8,20 @@ body{
 }
 .container{
     font-size: 10px;
-    width: 40em;
-    height: 40em;
+    width: 400px;
+    height: 400px;
     position: relative;
     overflow: hidden;
 }
 .sun{
     position: absolute;
-    top: 15em;
-    left: 15em;
-    width: 10em;
-    height: 10em;
-    background-color: rgb(255, 204, 0);
+    top: 150px;
+    left: 150px;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(255, 153, 0);
     border-radius: 50%;
-    box-shadow: 0 0 3em white;
+    box-shadow: 0 0 80px red;
 }
 .earth, .moon{
     position: absolute;
@@ -31,40 +31,77 @@ body{
     border-radius: 50%;
 }
 .earth{
-    top: 5em;
-    left: 5em;
-    width: 30em;
-    height: 30em;
-    animation: rahul 36.5s linear infinite;
+    top: 50px;
+    left: 50px;
+    height: 300px;
+    width: 300px;
+    animation: alig 36.5s linear infinite;
+    box-shadow: 0 0 80px rgba(255, 248, 58, 0.308);
 }
 .moon{
     top: 0;
     right: 0;
-    width: 8em;
-    height: 8em;
-    animation: rahul 5s linear infinite;
+    height: 80px;
+    width: 80px;
+    animation: alig 5s linear infinite;
+    
 }
-.earth::before,
-.moon::before{
+.earth::before,.moon::before{
     content: '';
     position: absolute;
     border-radius: 50%;
 }
 .earth::before{
-    top: 2.8em;
-    right: 2.8em;
-    width: 3em;
-    height: 3em;
-    background-color: rgb(80, 80, 201);
+    top: 28px;
+    right: 28px;
+    width: 35px;
+    height: 35px;
+    background-color: rgb(13, 143, 11);
 }
 .moon::before{
-    top: 0.8em;
-    right: 0.2em;
-    width: 1.2em;
-    height: 1.2em;
+    top: 8px;
+    right: 2px;
+    width: 12px;
+    height: 12px;
     background-color: silver;
 }
-@keyframes rahul{
+.pluto, .marsh{
+    position: absolute;
+    border-style: solid;
+    border-color: white transparent;
+    border-width: 0.1em 0.1em 0 0;
+    border-radius: 50%;
+}
+.pluto{
+    top: 100px;
+    left: 100px;
+    height: 200px;
+    width: 200px;
+    animation: alig1 2s linear infinite;
+}
+
+.pluto::before{
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+}
+
+
+.pluto::before{
+    top: 18px;
+    right: 18px;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(176, 17, 17);
+}
+
+
+@keyframes alig{
+    to{
+        transform: rotate(360deg);
+    }
+}
+@keyframes alig1{
     to{
         transform: rotate(360deg);
     }
